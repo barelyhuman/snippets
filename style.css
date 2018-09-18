@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div {
+  width: 100px;
+}
+
+.toggle-container {
+  position: relative;
+}
+
+.toggle-switch {
+  background: white;
+  position: absolute;
+  content: "";
+  border-radius: 1000px;
+  width: 50px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 2.5px;
+  border: 3.5px solid #333;
+  transition: 250ms;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-container > .toggle-switch:before {
+  position: absolute;
+  content: "";
+  background: #333;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+  height: 20px;
+  width: 20px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: 250ms;
+}
+
+.toggle-container > input:checked + .toggle-switch {
+  background: #333;
+}
+
+.toggle-container > input:checked + .toggle-switch:before {
+  background: white;
+  transform: translateX(30px) rotateY(180deg);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-container > input {
+  display: none;
+}
+
+.toggle-switch-2 {
+  background: white;
+  position: absolute;
+  content: "";
+  border-radius: 1000px;
+  width: 50px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  padding: 2.5px;
+  border: 3.5px solid #333;
+  transition: 500ms;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-container > .toggle-switch-2:before {
+  position: absolute;
+  content: "";
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top:10px solid #333;
+  border-left:10px solid #333;
+  border-bottom:10px solid transparent;
+  border-right:10px solid transparent;
+  transition: 500ms;
+}
+
+.toggle-container > input:checked + .toggle-switch-2 {
+  background: #333;
+}
+
+.toggle-container > input:checked + .toggle-switch-2:before {
+  border-top:10px solid white;
+  border-left:10px solid white;
+  border-bottom:10px solid transparent;
+  border-right:10px solid transparent;
+  transform: translateX(30px) rotateX(180deg) rotateY(180deg);
+}
+
+.toggle-container > input {
+  display: none;
+}
